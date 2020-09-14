@@ -213,3 +213,9 @@ footer li {
   line-height: 2.5;
 }
 
+footer .social i {
+  margin-top: 25px;
+  margin-right: 8px;
+  font-size: 35px;
+}
+
