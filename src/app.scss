@@ -1,0 +1,86 @@
+$heightHeaderFooter: 100px;
+$heightNavHeader: 50px;
+$fontGeneral: 14px;
+$colorBlack:  #101010;
+$colorlightblue:  #009cff;
+$colorwhite: #ffffff;
+$colorLi: #989898;
+
+@mixin displayFlex($displayFlex, $direction, $alignItems, $justifyContent){
+    display: $displayFlex;
+    flex-direction: $direction;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.container{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header{
+    height: $heightHeaderFooter;
+    width: 100vw;
+    background-color: $colorBlack;
+    .nav_info{
+        @include  displayFlex(flex, row, center, flex-end);
+        height: $heightNavHeader;
+        .info{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-left: 25px;
+                color: $colorLi;
+                font-size: $fontGeneral - 1;
+                &:hover{
+                    @include hover;
+                }
+                i {
+                    color: $colorlightblue;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .nav_logo{
+        height: $heightNavHeader;
+        @include  displayFlex(flex, row, center, space-between);
+        li{
+            display: inline-block;
+            margin-left: 45px;
+            color: $colorLi;
+            font-size: $fontGeneral;
+            &:hover{
+                @include hover;
+            }
+            i{
+                margin-left: 5px;
+            }
+            img{
+                width: 95px;
+            }
+        }
+    }
+}
+ main{
+    height: calc(100vh - #{$heightHeaderFooter  * 2});
+    background-color: green;
+ }
+
+footer{
+    height: $heightHeaderFooter;
+    background-color: red;
+}
