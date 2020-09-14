@@ -1,4 +1,4 @@
-* {
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap);* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,7 +38,8 @@ header .nav_info .info li {
 header .nav_info .info li:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: white;
+  color: #101010;
+  background-color: #ffffff;
 }
 
 header .nav_info .info li i {
@@ -64,7 +65,8 @@ header .nav_logo li {
 header .nav_logo li:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: white;
+  color: #101010;
+  background-color: #ffffff;
 }
 
 header .nav_logo li i {
@@ -75,13 +77,139 @@ header .nav_logo li img {
   width: 95px;
 }
 
-main {
-  height: calc(100vh - 200px);
-  background-color: green;
+.jumbotron {
+  background-image: url("https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.jumbotron .container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.jumbotron .container .download {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.jumbotron .container .download h1 {
+  font-size: 29px;
+  color: #ffffff;
+}
+
+.jumbotron .container .download h3 {
+  font-size: 21px;
+  color: #ffffff;
+}
+
+.jumbotron .container .download ul {
+  list-style: none;
+  color: #ffffff;
+}
+
+.jumbotron .container .download ul li {
+  line-height: 2.5;
+}
+
+.jumbotron .container .download ul li i {
+  margin-right: 5px;
+}
+
+.jumbotron .container .download button {
+  background-color: #666666;
+  text-align: left;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+}
+
+.jumbotron .container .download button i {
+  font-size: 34px;
+  margin-left: 10px;
+  line-height: 0;
+}
+
+.jumbotron .container .Buy {
+  width: 350px;
+  height: 100%;
+  background-color: #101010;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.jumbotron .container .Buy h1 {
+  font-size: 26px;
+  color: #ffffff;
+  line-height: 0;
+  display: flex;
+}
+
+.jumbotron .container .Buy img {
+  width: 100px;
+  position: absolute;
+  right: 180px;
+}
+
+.jumbotron .container .Buy h3 {
+  font-size: 17px;
+  color: #989898;
+  margin-bottom: 30px;
+}
+
+.jumbotron .container .Buy button {
+  background-color: #009cff;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  padding: 10px 35px;
+  margin-bottom: 40px;
+}
+
+.jumbotron .container .Buy .limited {
+  background-color: #ffffff;
+}
+
+.jumbotron .container .Buy .limited h3 {
+  font-size: 23px;
+  color: #101010;
+}
+
+.jumbotron .container .Buy .limited p {
+  font-size: 13px;
+}
+
+.jumbotron .container .Buy .limited .colorlightblue {
+  color: #009cff;
+  font-size: 17px;
+}
+
+.jumbotron .container .Buy .limited .colorlightblue:hover {
+  text-decoration: underline;
 }
 
 footer {
-  height: 100px;
-  background-color: red;
+  height: 100%;
+  width: 100vw;
+  background-color: #ececec;
+}
+
+footer h3 {
+  font-size: 18px;
+}
+
+footer li {
+  list-style: none;
+  color: #989898;
+  line-height: 2.5;
 }
 

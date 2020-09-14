@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.container{
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header{
+    height: $heightHeaderFooter;
+    width: 100vw;
+    background-color: $colorBlack;
+    .nav_info{
+        @include  displayFlex(flex, row, center, flex-end);
+        height: $heightNavHeader;
+        .info{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-left: 25px;
+                color: $colorLi;
+                font-size: $fontGeneral - 1;
+                &:hover{
+                    @include hover;
+                }
+                i {
+                    color: $colorlightblue;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .nav_logo{
+        height: $heightNavHeader;
+        @include  displayFlex(flex, row, center, space-between);
+        li{
+            display: inline-block;
+            margin-left: 45px;
+            color: $colorLi;
+            font-size: $fontGeneral;
+            &:hover{
+                @include hover;
+            }
+            i{
+                margin-left: 5px;
+            }
+            img{
+                width: 95px;
+            }
+        }
+    }
+}
+
+.jumbotron{
+    background-image: url('https://www.painterartist.com/static/ptr/product_content/painteressentials/7/hero-painteressentials-7.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    .container{
+        @include displayFlex(flex, row, flex-start, flex-end);
+        .download{
+            width: 500px;
+            height: 100%;
+            @include displayFlex(flex, column, flex-start, flex-start);
+            h1{
+                font-size:$fontGeneral + 15;
+                color: $colorwhite;
+            }
+            h3{
+                font-size: $fontGeneral +7;
+                color: $colorwhite;
+            }
+            ul{
+                list-style: none;
+                color: $colorwhite;
+                li{
+                    line-height: 2.5;
+                    i{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            button{
+                @include btn(#666666, left, $colorwhite, none);
+                padding: 10px;
+                i{
+                    font-size: 34px;
+                    margin-left: 10px;
+                    line-height: 0;
+                }
+            }
+        }
+        .Buy{
+            width: 350px;
+            height: 100%;
+            background-color: $colorBlack;
+            padding: 30px 15px;
+            @include displayFlex(flex, column, flex-start, flex-start);
+            h1{
+                font-size: $fontGeneral + 12;
+                color: $colorwhite;
+                line-height: 0;
+                display: flex;
+            }
+            img{
+                width: 100px;
+                position: absolute;
+                right: 180px;
+            }
+            h3{
+                font-size: $fontGeneral +3;
+                color: $colorLi;
+                margin-bottom: 30px;
+            }
+            button{
+                @include btn($colorlightblue, center, $colorwhite, none);
+                padding: 10px 35px;
+                margin-bottom: 40px;
+            }
+            .limited{
+                background-color: $colorwhite;
+                h3{
+                    font-size: $fontGeneral + 9;
+                    color:$colorBlack;
+                }
+                p{
+                    font-size: $fontGeneral - 1;
+                }
+                .colorlightblue{
+                    color: $colorlightblue;
+                    font-size: $fontGeneral + 3;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    height: 100%;
+    width: 100vw;
+    background-color:$colorFooter;
+    h3{
+        font-size: $fontGeneral + 4;
+    }
+    li{
+        list-style: none;
+        color: $colorLi;
+        line-height: 2.5;
+    }
+}

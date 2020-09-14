@@ -1,0 +1,20 @@
+@mixin displayFlex($displayFlex, $direction, $alignItems, $justifyContent){
+    display: $displayFlex;
+    flex-direction: $direction;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: $colorBlack;
+    background-color: $colorwhite;
+}
+
+@mixin btn($backgroundColor, $textAlign, $colorText, $border){
+    background-color: $backgroundColor;
+    text-align: $textAlign;
+    color: $colorText;
+    border: $border;
+}
